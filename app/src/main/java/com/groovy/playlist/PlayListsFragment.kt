@@ -1,4 +1,4 @@
-package petros.efthymiou.groovy.playlist
+package com.groovy.playlist
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -12,7 +12,7 @@ import android.widget.Toast
 import androidx.fragment.app.viewModels
 import kotlinx.coroutines.channels.ReceiveChannel
 import okhttp3.OkHttpClient
-import petros.efthymiou.groovy.R
+import com.groovy.R
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

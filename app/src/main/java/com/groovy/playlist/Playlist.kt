@@ -1,7 +1,7 @@
-package petros.efthymiou.groovy.playlist
+package com.groovy.playlist
 
 import com.google.gson.annotations.SerializedName
-import petros.efthymiou.groovy.R
+import com.groovy.R
 data class Playlist(
     @SerializedName("id")
     val id: String,

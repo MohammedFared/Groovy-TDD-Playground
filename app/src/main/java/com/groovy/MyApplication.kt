@@ -1,4 +1,4 @@
-package petros.efthymiou.groovy
+package com.groovy
 
 import android.app.Application
 

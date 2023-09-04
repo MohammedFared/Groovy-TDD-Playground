@@ -1,4 +1,4 @@
-package petros.efthymiou.groovy
+package com.groovy
 
 import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -8,8 +8,8 @@ import org.junit.Assert.*
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import petros.efthymiou.groovy.utils.RecyclerViewAssertions.assertDisplayedAtPosition
-import petros.efthymiou.groovy.utils.RecyclerViewAssertions.assertDrawableDisplayedAtPosition
+import com.groovy.utils.RecyclerViewAssertions.assertDisplayedAtPosition
+import com.groovy.utils.RecyclerViewAssertions.assertDrawableDisplayedAtPosition
 
 /**
  * Instrumented test, which will execute on an Android device.

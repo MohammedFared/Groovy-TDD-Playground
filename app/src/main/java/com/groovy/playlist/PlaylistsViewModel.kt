@@ -1,4 +1,4 @@
-package petros.efthymiou.groovy.playlist
+package com.groovy.playlist
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -22,7 +22,7 @@ class PlaylistsViewModel(
         val Factory: ViewModelProvider.Factory = viewModelFactory {
             initializer {
                 val retrofit = Retrofit.Builder()
-                    .baseUrl("https://2c62-45-96-185-102.ngrok-free.app/groovy/")
+                    .baseUrl("https://ngrok-free.app/groovy/")
                     .client(OkHttpClient())
                     .addConverterFactory(GsonConverterFactory.create())
                     .build()

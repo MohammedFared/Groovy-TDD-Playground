@@ -1,12 +1,12 @@
-package petros.efthymiou.groovy.playlist
+package com.groovy.playlist
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import petros.efthymiou.groovy.R
-import petros.efthymiou.groovy.databinding.ItemPlaylistBinding
+import com.groovy.R
+import com.groovy.databinding.ItemPlaylistBinding
 
 class PlayListsAdapter(
     private val values: List<Playlist>

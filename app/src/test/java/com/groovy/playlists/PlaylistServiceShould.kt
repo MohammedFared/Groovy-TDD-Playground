@@ -1,4 +1,4 @@
-package petros.efthymiou.groovy.playlists
+package com.groovy.playlists
 
 import junit.framework.TestCase.assertEquals
 import kotlinx.coroutines.flow.first
@@ -7,10 +7,10 @@ import org.junit.Test
 import org.mockito.Mockito.mock
 import org.mockito.Mockito.verify
 import org.mockito.Mockito.`when`
-import petros.efthymiou.groovy.playlist.PlaylistAPIService
-import petros.efthymiou.groovy.playlist.Playlist
-import petros.efthymiou.groovy.playlist.PlaylistService
-import petros.efthymiou.groovy.utils.BaseUnitTest
+import com.groovy.playlist.PlaylistAPIService
+import com.groovy.playlist.Playlist
+import com.groovy.playlist.PlaylistService
+import com.groovy.utils.BaseUnitTest
 import java.lang.RuntimeException
 
 class PlaylistServiceShould : BaseUnitTest() {

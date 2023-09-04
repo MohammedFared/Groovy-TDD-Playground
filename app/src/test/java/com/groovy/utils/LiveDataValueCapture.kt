@@ -1,4 +1,4 @@
-package petros.efthymiou.groovy.utils
+package com.groovy.utils
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer

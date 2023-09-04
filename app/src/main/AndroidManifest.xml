@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="petros.efthymiou.groovy">
+    package="com.groovy">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -14,8 +14,8 @@
         android:usesCleartextTraffic="true">
         <activity
             android:name=".MainActivity"
-            android:label="@string/playlists_screen_title"
-            android:exported="true">
+            android:exported="true"
+            android:label="@string/playlists_screen_title">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

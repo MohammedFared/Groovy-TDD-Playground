@@ -1,4 +1,4 @@
-package petros.efthymiou.groovy.playlist
+package com.groovy.playlist
 
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
