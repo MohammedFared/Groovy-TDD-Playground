@@ -1,5 +1,6 @@
 package com.groovy.di
 
+import com.groovy.common.CommonConstants
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -15,7 +16,7 @@ class RetrofitModule {
     @Provides
     @Singleton
     fun retrofit(): Retrofit = Retrofit.Builder()
-        .baseUrl("https://ngrok-free.app/groovy/")
+        .baseUrl(CommonConstants.Networking.BASE_URL)
         .client(OkHttpClient())
         .addConverterFactory(GsonConverterFactory.create())
         .build()
