@@ -9,16 +9,16 @@ import org.mockito.Mockito.mock
 import org.mockito.Mockito.times
 import org.mockito.Mockito.verify
 import org.mockito.Mockito.`when`
-import com.groovy.playlist.Playlist
+import com.groovy.playlist.dto.Playlist
 import com.groovy.playlist.PlaylistRepository
-import com.groovy.playlist.PlaylistService
+import com.groovy.playlist.PlaylistRemoteService
 import com.groovy.utils.BaseUnitTest
 import java.lang.RuntimeException
 
 class PlaylistRepositoryShould : BaseUnitTest() {
 
     private val exception = RuntimeException("Something went wrong")
-    private val service: PlaylistService = mock()
+    private val service: PlaylistRemoteService = mock()
     private val playlists = mock<List<Playlist>>()
 
     @Test
