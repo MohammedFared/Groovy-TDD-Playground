@@ -29,7 +29,7 @@ class PlaylistsFeature {
 
     @Test
     fun displayPlaylistsList() {
-        Thread.sleep(4000)
+        Thread.sleep(3000)
 
         assertRecyclerViewItemCount(R.id.rvPlaylist, 10)
         assertDisplayedAtPosition(R.id.rvPlaylist, 0, R.id.txtTitle, "Hard Rock Cafe")

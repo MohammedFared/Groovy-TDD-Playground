@@ -5,13 +5,11 @@ import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.runTest
 import org.junit.Test
-import org.junit.runner.notification.Failure
-import org.mockito.Mockito
 import org.mockito.Mockito.mock
 import org.mockito.Mockito.times
 import org.mockito.Mockito.verify
 import org.mockito.Mockito.`when`
-import com.groovy.playlist.Playlist
+import com.groovy.playlist.dto.Playlist
 import com.groovy.playlist.PlaylistRepository
 import com.groovy.playlist.PlaylistsViewModel
 import com.groovy.utils.BaseUnitTest

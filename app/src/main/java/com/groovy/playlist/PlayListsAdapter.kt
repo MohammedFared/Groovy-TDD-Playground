@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.groovy.R
 import com.groovy.databinding.ItemPlaylistBinding
+import com.groovy.playlist.dto.Playlist
 
 class PlayListsAdapter(
     private val values: List<Playlist>

@@ -8,12 +8,12 @@ import org.mockito.Mockito.mock
 import org.mockito.Mockito.verify
 import org.mockito.Mockito.`when`
 import com.groovy.playlist.PlaylistAPIService
-import com.groovy.playlist.Playlist
-import com.groovy.playlist.PlaylistService
+import com.groovy.playlist.dto.Playlist
+import com.groovy.playlist.PlaylistRemoteService
 import com.groovy.utils.BaseUnitTest
 import java.lang.RuntimeException
 
-class PlaylistServiceShould : BaseUnitTest() {
+class PlaylistRemoteServiceShould : BaseUnitTest() {
 
     private val exception = RuntimeException("Something went wrong")
     private val playlists = mock<List<Playlist>>()
@@ -21,7 +21,7 @@ class PlaylistServiceShould : BaseUnitTest() {
 
     @Test
     fun getPlaylists() = runTest {
-        PlaylistService(playlistApiService).fetchPlaylists().first()
+        PlaylistRemoteService(playlistApiService).fetchPlaylists().first()
 
         verify(playlistApiService).fetchPlaylists()
     }
@@ -40,14 +40,14 @@ class PlaylistServiceShould : BaseUnitTest() {
         assertEquals(exception.message, service.fetchPlaylists().first().exceptionOrNull()?.message)
     }
 
-    private suspend fun mockSuccessfulCase(): PlaylistService {
+    private suspend fun mockSuccessfulCase(): PlaylistRemoteService {
         `when`(playlistApiService.fetchPlaylists()).thenReturn(playlists)
-        return PlaylistService(playlistApiService)
+        return PlaylistRemoteService(playlistApiService)
     }
 
-    private suspend fun mockFailedCase(): PlaylistService {
+    private suspend fun mockFailedCase(): PlaylistRemoteService {
         `when`(playlistApiService.fetchPlaylists())
             .thenThrow(RuntimeException("non user friendly message"))
-        return PlaylistService(playlistApiService)
+        return PlaylistRemoteService(playlistApiService)
     }
 }

@@ -1,10 +1,11 @@
 package com.groovy.playlist
 
-import kotlinx.coroutines.flow.Flow
+import dagger.hilt.android.scopes.ViewModelScoped
+import javax.inject.Inject
 
-class PlaylistRepository(
-    private val service: PlaylistService
+@ViewModelScoped
+class PlaylistRepository @Inject constructor(
+    private val service: PlaylistRemoteService
 ) {
     suspend fun getPlaylists() = service.fetchPlaylists()
-
 }
