@@ -36,4 +36,9 @@ class PlaylistsFeature {
         assertDisplayedAtPosition(R.id.rvPlaylist, 0, R.id.txtCategory, "rock")
         assertDrawableDisplayedAtPosition(R.id.rvPlaylist, 0, R.id.imgPlaylist, R.mipmap.playlist)
     }
+
+    @Test
+    fun displayLoaderWhileFetchingPlaylists() {
+        assertDisplayed(R.id.loader)
+    }
 }
