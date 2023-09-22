@@ -34,7 +34,15 @@ class PlaylistsFeature {
         assertRecyclerViewItemCount(R.id.rvPlaylist, 10)
         assertDisplayedAtPosition(R.id.rvPlaylist, 0, R.id.txtTitle, "Hard Rock Cafe")
         assertDisplayedAtPosition(R.id.rvPlaylist, 0, R.id.txtCategory, "rock")
-        assertDrawableDisplayedAtPosition(R.id.rvPlaylist, 0, R.id.imgPlaylist, R.mipmap.playlist)
+        assertDrawableDisplayedAtPosition(R.id.rvPlaylist, 1, R.id.imgPlaylist, R.mipmap.playlist)
+    }
+
+    @Test
+    fun displayRockTypeResources() {
+        Thread.sleep(3000)
+
+        assertDrawableDisplayedAtPosition(R.id.rvPlaylist, 0, R.id.imgPlaylist, R.mipmap.rock)
+        assertDrawableDisplayedAtPosition(R.id.rvPlaylist, 4, R.id.imgPlaylist, R.mipmap.rock)
     }
 
     @Test

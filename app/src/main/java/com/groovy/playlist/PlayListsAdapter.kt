@@ -24,10 +24,10 @@ class PlayListsAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = values.get(position)
+        val item = values[position]
         holder.title.text = item.playlistTitle
         holder.category.text = item.playlistCategory
-        holder.playlistArt.setImageResource(R.mipmap.playlist)
+        holder.playlistArt.setImageResource(item.playlistArt)
     }
 
     override fun getItemCount(): Int = values.size

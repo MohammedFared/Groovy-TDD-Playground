@@ -4,11 +4,14 @@ import com.google.gson.annotations.SerializedName
 import com.groovy.R
 
 data class Playlist(
-    @SerializedName("id")
-    val id: String,
-    @SerializedName("name")
-    val playlistTitle: String,
-    @SerializedName("category")
-    val playlistCategory: String,
-    val playlistArt: Int = R.mipmap.playlist
-)
+    var id: String,
+    var playlistTitle: String,
+    var playlistCategory: String,
+    var playlistArt: Int = R.mipmap.playlist
+) {
+    constructor(playlistRaw: PlaylistRaw) : this(
+        playlistRaw.id,
+        playlistRaw.playlistTitle,
+        playlistRaw.playlistCategory,
+    )
+}

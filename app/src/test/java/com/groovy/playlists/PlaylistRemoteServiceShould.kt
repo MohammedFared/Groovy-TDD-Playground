@@ -8,15 +8,15 @@ import org.mockito.Mockito.mock
 import org.mockito.Mockito.verify
 import org.mockito.Mockito.`when`
 import com.groovy.playlist.PlaylistAPIService
-import com.groovy.playlist.dto.Playlist
 import com.groovy.playlist.PlaylistRemoteService
+import com.groovy.playlist.dto.PlaylistRaw
 import com.groovy.utils.BaseUnitTest
 import java.lang.RuntimeException
 
 class PlaylistRemoteServiceShould : BaseUnitTest() {
 
     private val exception = RuntimeException("Something went wrong")
-    private val playlists = mock<List<Playlist>>()
+    private val playlistsRaw = mock<List<PlaylistRaw>>()
     private val playlistApiService: PlaylistAPIService = mock()
 
     @Test
@@ -30,7 +30,7 @@ class PlaylistRemoteServiceShould : BaseUnitTest() {
     fun fetchPlaylists() = runTest {
         val service = mockSuccessfulCase()
 
-        assertEquals(Result.success(playlists), service.fetchPlaylists().first())
+        assertEquals(Result.success(playlistsRaw), service.fetchPlaylists().first())
     }
 
     @Test
@@ -41,7 +41,7 @@ class PlaylistRemoteServiceShould : BaseUnitTest() {
     }
 
     private suspend fun mockSuccessfulCase(): PlaylistRemoteService {
-        `when`(playlistApiService.fetchPlaylists()).thenReturn(playlists)
+        `when`(playlistApiService.fetchPlaylists()).thenReturn(playlistsRaw)
         return PlaylistRemoteService(playlistApiService)
     }
 
