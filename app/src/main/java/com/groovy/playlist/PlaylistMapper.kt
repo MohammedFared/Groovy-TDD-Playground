@@ -11,8 +11,10 @@ class PlaylistMapper @Inject constructor() : Function1<List<PlaylistRaw>, List<P
         return playlistsRaw.map {
             Playlist(it).apply {
                 playlistArt =
-                    if (playlistCategory.equals("rock", ignoreCase = true)) R.mipmap.rock
-                    else R.mipmap.playlist
+                    when (playlistCategory) {
+                        "rock" -> R.mipmap.rock
+                        else -> R.mipmap.playlist
+                    }
             }
         }
     }
